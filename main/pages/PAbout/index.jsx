@@ -11,12 +11,6 @@ export default observer(function PAbout () {
   return <div styleName='root'>
     <h1>Тест</h1>
     <button onClick={async () => {
-      const $$groupCounts = model.query('mocks', { $count: 1 })
-//      const $$groups = model.query('mocks', {})
-//      await new Promise(r => setTimeout(r, 12000))
-      await model.subscribe($$groupCounts)
-      console.log('$$groupCounts.getExtra()', $$groupCounts.getExtra())
-      model.unsubscribe($$groupCounts)
       setTab(1)
     }}>Ститичный контент</button>
     <button onClick={async () => {
